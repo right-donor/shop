@@ -5,13 +5,16 @@ import {Cart} from 'grommet-icons'
 
 class Product extends React.Component {
     state = {
-        product: {
-            name: "Rubber Duck",
-            price: 12.50,
-            description: "An amazing rubber duck, 10x10.",
-            manufacturer: "B-Duck",
-            imageurl: ""
-        }
+        product: {},
+        onCart: false
+    }
+
+    componentWillMount = () => {
+        this.setState({
+            product: this.props.product,
+            onCart: this.props.onCart
+        })
+        console.log(this.state)
     }
 
     render() {
@@ -29,9 +32,15 @@ class Product extends React.Component {
                         <Image fit="contain" fallback="http://pngimg.com/uploads/rubber_duck/rubber_duck_PNG4.png" src={this.state.product.imageurl}/>
                     </Box>
                     <Text> {this.state.product.name} </Text>
-                    <Text size="small">{this.state.product.manufacturer}</Text>
-                    <Anchor href="#" label="See more"/>
-                    <Button icon={<Cart/>}label="Add to Cart" onClick={() => {}}/>
+                    {!this.state.onCart && <Text size="small">{this.state.product.manufacturer}</Text>}
+                    <Text weight="bold" size="small">{this.state.product.price} Tokens </Text>
+                    {!this.state.onCart &&
+                        <>
+                            <Anchor href="#" label="See more"/>
+                            <Button icon={<Cart/>}label="Add to Cart" onClick={() => this.props.addToCart(this.state.product)}/>
+                        </>
+                    }
+                    
             </Box>
         )
     }

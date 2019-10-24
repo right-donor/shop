@@ -3,6 +3,9 @@ import React from 'react'
 import Product from '../components/product'
 import { Box, Heading, Grid, ResponsiveContext } from 'grommet'
 
+import Header from '../components/header'
+import Footer from '../components/footer';
+
 const columns = {
     small: ["auto"],
     medium: ["auto", "auto"],
@@ -92,16 +95,89 @@ const style = {
 class Catalog extends React.Component {
     state = {
         recentProducts: [],
-        otherProducts: []
+        otherProducts: [],
+        cart : []
+    }
+
+    addToCart = product => {
+        this.setState({
+            cart : [...this.state.cart,product]
+        })
     }
 
     componentWillMount = () => {
-        this.setState({ recentProducts: [1, 2, 3, 4], otherProducts: [5, 6, 7, 8, 9,10] })
+        this.setState({ recentProducts: [{
+            name: "Rubber Duck",
+            price: 12.50,
+            description: "An amazing rubber duck, 10x10.",
+            manufacturer: "B-Duck",
+            imageurl: ""
+        }, {
+            name: "Rubber Duck",
+            price: 12.50,
+            description: "An amazing rubber duck, 10x10.",
+            manufacturer: "B-Duck",
+            imageurl: ""
+        }, {
+            name: "Rubber Duck",
+            price: 12.50,
+            description: "An amazing rubber duck, 10x10.",
+            manufacturer: "B-Duck",
+            imageurl: ""
+        }, {
+            name: "Rubber Duck",
+            price: 12.50,
+            description: "An amazing rubber duck, 10x10.",
+            manufacturer: "B-Duck",
+            imageurl: ""
+        }], otherProducts: [{
+            name: "Rubber Duck",
+            price: 12.50,
+            description: "An amazing rubber duck, 10x10.",
+            manufacturer: "B-Duck",
+            imageurl: ""
+        },
+        {
+            name: "Rubber Duck",
+            price: 12.50,
+            description: "An amazing rubber duck, 10x10.",
+            manufacturer: "B-Duck",
+            imageurl: ""
+        },
+        {
+            name: "Rubber Duck",
+            price: 12.50,
+            description: "An amazing rubber duck, 10x10.",
+            manufacturer: "B-Duck",
+            imageurl: ""
+        },
+        {
+            name: "Rubber Duck",
+            price: 12.50,
+            description: "An amazing rubber duck, 10x10.",
+            manufacturer: "B-Duck",
+            imageurl: ""
+        },
+        {
+            name: "Rubber Duck",
+            price: 12.50,
+            description: "An amazing rubber duck, 10x10.",
+            manufacturer: "B-Duck",
+            imageurl: ""
+        },
+        {
+            name: "Rubber Duck",
+            price: 12.50,
+            description: "An amazing rubber duck, 10x10.",
+            manufacturer: "B-Duck",
+            imageurl: ""
+        }]})
     }
 
     render() {
         return (
             <>
+                <Header cartItems={this.state.cart}/>
                 {/** 4 Most Recent Products */}
                 <Heading level="2" style={style.heading}>Most Recent Products</Heading>
                 <Box
@@ -113,7 +189,7 @@ class Catalog extends React.Component {
                     gap="large"
                     overflow="scroll">
                     {this.state.recentProducts.map(product =>
-                        <Product />
+                        <Product addToCart={this.addToCart} product={product} onCart={false}/>
                     )}
                 </Box>
                 {/** All other products */}
@@ -126,9 +202,10 @@ class Catalog extends React.Component {
                     areas={areas}
                     margin="medium">
                         {this.state.otherProducts.map(product =>
-                            <Product/>
+                            <Product addToCart={this.addToCart} product={product} onCart={false}/>
                         )}
                 </ResponsiveGrid>
+                <Footer/>
             </>
         )
     }
