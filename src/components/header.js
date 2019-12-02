@@ -40,6 +40,8 @@ class Header extends React.Component {
                 alert('Hubo un error al realizar tu compra')
             } else {
                 alert('Gracias por realizar tu compra')
+                this.props.clearCart()
+                window.location.reload()
             }
         })
         .catch((error)=>{

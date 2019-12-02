@@ -105,6 +105,10 @@ class Catalog extends React.Component {
         })
     }
 
+    clearCart = () => {
+        this.setState({cart: {}})
+    }
+
     componentWillMount = () => {
         this.setState({ recentProducts: [{
             name: "Rubber Duck",
@@ -163,7 +167,7 @@ class Catalog extends React.Component {
     render() {
         return (
             <>
-                <Header cartItems={this.state.cart}/>
+                <Header clearCart={this.clearCart} cartItems={this.state.cart}/>
                 {/** 4 Most Recent Products */}
                 <Heading level="2" style={style.heading}>Most Recent Products</Heading>
                 <Box
