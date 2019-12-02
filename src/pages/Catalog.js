@@ -113,64 +113,50 @@ class Catalog extends React.Component {
             manufacturer: "B-Duck",
             imageurl: ""
         }, {
-            name: "Rubber Duck",
+            name: "Hedgehog Rubber Duck",
             price: 12.50,
             description: "An amazing rubber duck, 10x10.",
             manufacturer: "B-Duck",
-            imageurl: ""
+            imageurl: "https://lilalu-shop.com/media/image/03/c7/39/lilalu-quietscheente-igel-hedgehog-rubber-duck-HR.png"
         }, {
-            name: "Rubber Duck",
+            name: "Trump Rubber Duck",
             price: 12.50,
             description: "An amazing rubber duck, 10x10.",
             manufacturer: "B-Duck",
-            imageurl: ""
+            imageurl: "https://cdn.dodowallpaper.com/full/519/rubber-duck-2.jpg"
         }, {
-            name: "Rubber Duck",
+            name: "Ghostbusters Rubber Duck",
             price: 12.50,
             description: "An amazing rubber duck, 10x10.",
             manufacturer: "B-Duck",
-            imageurl: ""
+            imageurl: "https://i.ebayimg.com/images/g/ZK8AAOSwC-tZ-GLY/s-l1600.jpg"
         }], otherProducts: [{
-            name: "Rubber Duck",
+            name: "Iron Man Duck",
             price: 12.50,
             description: "An amazing rubber duck, 10x10.",
             manufacturer: "B-Duck",
-            imageurl: ""
+            imageurl: "https://www.amsterdamduckstore.com/wp-content/uploads/2019/09/Red-Star-rubber-duck-leaning-Amsterdam-Duck-Store.jpg"
         },
         {
-            name: "Rubber Duck",
+            name: "New York Duck",
             price: 12.50,
             description: "An amazing rubber duck, 10x10.",
             manufacturer: "B-Duck",
-            imageurl: ""
+            imageurl: "https://i5.walmartimages.com/asr/bde9c43c-1793-41a7-a927-90472355e620_1.5c3d6738797f1085ed962cb0218f32a4.jpeg"
         },
         {
-            name: "Rubber Duck",
+            name: "Octopus Duck",
             price: 12.50,
             description: "An amazing rubber duck, 10x10.",
             manufacturer: "B-Duck",
-            imageurl: ""
+            imageurl: "https://cdn.shopify.com/s/files/1/0115/4891/7819/products/23206_Rubber_Duck_Octopus_e4c35a5c-e3dc-42a5-9cd9-15a2793a81f1.jpg?v=1557903065"
         },
         {
-            name: "Rubber Duck",
+            name: "Gay Duck",
             price: 12.50,
             description: "An amazing rubber duck, 10x10.",
             manufacturer: "B-Duck",
-            imageurl: ""
-        },
-        {
-            name: "Rubber Duck",
-            price: 12.50,
-            description: "An amazing rubber duck, 10x10.",
-            manufacturer: "B-Duck",
-            imageurl: ""
-        },
-        {
-            name: "Rubber Duck",
-            price: 12.50,
-            description: "An amazing rubber duck, 10x10.",
-            manufacturer: "B-Duck",
-            imageurl: ""
+            imageurl: "https://freepngimg.com/thumb/machine/47287-8-rubber-duck-image-free-clipart-hd.png"
         }]})
     }
 
